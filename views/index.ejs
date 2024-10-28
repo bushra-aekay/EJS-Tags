@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd and Even Seconds</title>
+</head>
+<body>
+    <h1><%= title %></h1> <%# tag to render the JS o/p %>
+    <p>current second: <%= seconds %></p>
+    <% if (seconds%2 === 0 ) { %> <%# tag to execute JS %>
+        <ul> <%# unordered lost %>
+            <% items.forEach((fruit)=>{ %> <%# code to make sure each fruit is being used as a single different element %>
+                <li> <%# list element %>
+                    <%= fruit %>
+                </li>
+            <% }) %>
+        </ul>
+    <% }else{ %>
+        <p>no items to display</p>
+    <% } %>
+    <%- htmlContent %> <%# tag to render HTML %>
+    <%-include("footer.ejs") %> <%# tag to include another ejs file %>
+</body>
+</html>
